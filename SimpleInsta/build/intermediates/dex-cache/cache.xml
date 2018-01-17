@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\a1e73a4923462e0545b20f3c83a6b18ca42a46cd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3c433e48557e476290f45fb6cb568d1a103c9978">
+        <dex dex="E:\Programming\SimpleInsta-master-master\app\build\intermediates\pre-dexed\debug\classes_e583462cc8949b72be0797101a50236f817daf09.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\e22b939e6ebeb6d61296a86cec6b13faa8563aec\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="51518e8e8f97c314a243d9def0ded91d385b6a1e">
+        <dex dex="E:\Programming\SimpleInsta-master-master\app\build\intermediates\pre-dexed\debug\classes_322709ee1f06ee8ce55bca02f8b90358904eaf09.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="E:\Programming\SimpleInsta-master-master\app\build\intermediates\pre-dexed\debug\glide-3.7.0_56487dcc601537ec955eea625d9774ba24b2cff3.jar" />
+    </item>
+
+</items>

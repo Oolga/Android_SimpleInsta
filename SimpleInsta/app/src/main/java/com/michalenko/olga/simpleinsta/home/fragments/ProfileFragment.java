@@ -34,6 +34,7 @@ import java.util.Map;
 
 public class ProfileFragment extends Fragment implements PhotoAdapter.ItemClickListener {
 
+    private String currentUserEmail;
     private DatabaseReference mDatabase;
     private RecyclerView recyclerView;
     private TextView emailEdit;
@@ -64,21 +65,23 @@ public class ProfileFragment extends Fragment implements PhotoAdapter.ItemClickL
         listURI = new ArrayList<String>();
         emailEdit = (TextView) getView().findViewById(R.id.textEmail);
         mAuth = FirebaseAuth.getInstance();
+        currentUserEmail =mAuth.getCurrentUser().getEmail();
         recyclerView = (RecyclerView) getView().findViewById(R.id.rvProfile);
         emailEdit.setText(mAuth.getCurrentUser().getEmail().toString());
     }
 
     public void getURIS(){
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("posts").child(mAuth.getCurrentUser().getUid().toString());
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("posts").child("postList").orderByChild("owner").equalTo(currentUserEmail).getRef(); //FirebaseDatabase.getInstance().getReference().child("posts").child(mAuth.getCurrentUser().getUid().toString());
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
             public void onDataChange(DataSnapshot snapshot) {
 
                 for (DataSnapshot postSnapshot: snapshot.getChildren()) {
-            Post post = postSnapshot.getValue(Post.class);
-                    if( post != null)
-                    listURI.add(post.getImagePath());
+                    Post post = postSnapshot.getValue(Post.class);
+                    String t= post.getOwner();
+                    if( post != null && post.getOwner().equals(currentUserEmail))
+                        listURI.add(post.getImagePath());
                 }
 
                 int numberOfColumns = 3;

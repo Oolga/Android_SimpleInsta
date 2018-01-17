@@ -78,7 +78,7 @@ public class TimelineFragment extends Fragment {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(getContext(), "Проверьте подключение к интернет", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Проверьте подключение к интернету", Toast.LENGTH_SHORT).show();
             }
 
         });
